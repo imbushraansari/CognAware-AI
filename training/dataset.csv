@@ -1,0 +1,172 @@
+text,overgeneralization,catastrophizing,mind_reading,emotional_reasoning,black_white_thinking,personalization
+I finished my tasks on time today,0,0,0,0,0,0
+I need to review my notes before tomorrow,0,0,0,0,0,0
+I enjoyed my walk after work,0,0,0,0,0,0
+I can ask for help if I get stuck,0,0,0,0,0,0
+I was quiet in the meeting and that is okay,0,0,0,0,0,0
+I want to cook dinner at home tonight,0,0,0,0,0,0
+I am still learning this new tool,0,0,0,0,0,0
+I can improve with practice,0,0,0,0,0,0
+I slept better last night,0,0,0,0,0,0
+I answered two emails this morning,0,0,0,0,0,0
+I will take a short break and continue,0,0,0,0,0,0
+I forgot one detail but I fixed it,0,0,0,0,0,0
+I felt nervous and still completed the task,0,0,0,0,0,0
+I plan to call my friend this weekend,0,0,0,0,0,0
+I can prepare earlier next time,0,0,0,0,0,0
+I had a normal day at work,0,0,0,0,0,0
+I am proud that I kept my routine today,0,0,0,0,0,0
+I can handle this one step at a time,0,0,0,0,0,0
+I made progress even if it was small,0,0,0,0,0,0
+I am tired so I will rest tonight,0,0,0,0,0,0
+I always mess up when I have to speak,1,0,0,0,0,0
+Nothing I do at work ever goes right,1,0,0,0,0,0
+I failed one quiz so I am bad at this subject,1,0,0,0,0,0
+I missed one workout so I never stay consistent,1,0,0,0,0,0
+I got one harsh comment so everyone dislikes my work,1,0,0,0,0,0
+I forgot one deadline so I am irresponsible in everything,1,0,0,0,0,0
+When one plan changes my whole week is always a mess,1,0,0,0,0,0
+I was awkward once so I am terrible socially,1,0,0,0,0,0
+I made one typo so I am careless all the time,1,0,0,0,0,0
+One rejection means I will never get selected,1,0,0,0,0,0
+I was late today so I am always unreliable,1,0,0,0,0,0
+I could not focus this morning so I can never focus,1,0,0,0,0,0
+I argued once so I ruin every relationship,1,0,0,0,0,0
+I forgot a name so I am bad with people in general,1,0,0,0,0,0
+I stumbled in one answer so I am bad at interviews,1,0,0,0,0,0
+I made one budgeting mistake so I am terrible with money,1,0,0,0,0,0
+I felt distracted today so I will always underperform,1,0,0,0,0,0
+I did not finish one book so I never complete anything,1,0,0,0,0,0
+I had one rough meeting so my team communication is always poor,1,0,0,0,0,0
+I skipped one call so I am a bad friend overall,1,0,0,0,0,0
+If I make one mistake in this report I will lose my job,0,1,0,0,0,0
+If I do not reply right now everyone will be upset with me,0,1,0,0,0,0
+If this project is delayed my career is over,0,1,0,0,0,0
+If I fail this test my future is ruined,0,1,0,0,0,0
+If I say the wrong thing this friendship will end,0,1,0,0,0,0
+If I miss this payment everything will collapse,0,1,0,0,0,0
+If I get nervous during the talk it will be a disaster,0,1,0,0,0,0
+If I need extra time everyone will think I am incapable,0,1,0,0,0,0
+If I forget one point the whole presentation will fail,0,1,0,0,0,0
+If I am not perfect today I will be judged forever,0,1,0,0,0,0
+If I cannot solve this now I will never catch up,0,1,0,0,0,0
+If I ask a question I will look foolish in front of everyone,0,1,0,0,0,0
+If my message is ignored it means the relationship is done,0,1,0,0,0,0
+If I make one wrong choice I will ruin everything,0,1,0,0,0,0
+If I feel stressed this week I will burn out completely,0,1,0,0,0,0
+If I get feedback today it will probably be terrible,0,1,0,0,0,0
+If this plan changes I will not be able to handle anything,0,1,0,0,0,0
+If I cannot sleep tonight tomorrow will be impossible,0,1,0,0,0,0
+If I take a break I will fall behind beyond repair,0,1,0,0,0,0
+If I do not impress them now I will never succeed,0,1,0,0,0,0
+They probably think I am boring when I stay quiet,0,0,1,0,0,0
+My manager must think I am lazy because I asked for clarification,0,0,1,0,0,0
+They looked away so they must not respect me,0,0,1,0,0,0
+My friend replied late so she must be annoyed with me,0,0,1,0,0,0
+They are whispering so they are likely talking about me,0,0,1,0,0,0
+My teammate was brief so he must be disappointed in me,0,0,1,0,0,0
+They did not laugh so they must think my idea was bad,0,0,1,0,0,0
+My professor seemed serious so she must think I am unprepared,0,0,1,0,0,0
+They did not invite me so they must not want me around,0,0,1,0,0,0
+My partner is quiet so they must be upset with me,0,0,1,0,0,0
+He ended the call quickly so he must be tired of me,0,0,1,0,0,0
+She corrected me so she must think I am incompetent,0,0,1,0,0,0
+They chose another option so they must not value my input,0,0,1,0,0,0
+My post got few likes so people must think I am awkward,0,0,1,0,0,0
+They canceled plans so they must not enjoy my company,0,0,1,0,0,0
+My boss used a short email so she must be unhappy with me,0,0,1,0,0,0
+They were polite but distant so they must dislike me,0,0,1,0,0,0
+My classmate did not wave so he must be ignoring me on purpose,0,0,1,0,0,0
+They paused before answering so they must doubt me,0,0,1,0,0,0
+My colleague asked questions so she must think I am wrong,0,0,1,0,0,0
+I feel guilty so I must have done something bad,0,0,0,1,0,0
+I feel anxious so this situation must be dangerous,0,0,0,1,0,0
+I feel like a failure so I probably am one,0,0,0,1,0,0
+I feel uncertain so my decision must be wrong,0,0,0,1,0,0
+I feel embarrassed so everyone must see me as incompetent,0,0,0,1,0,0
+I feel tense so I must be unable to cope,0,0,0,1,0,0
+I feel overwhelmed so this task must be impossible,0,0,0,1,0,0
+I feel sad so nothing in my life is going well,0,0,0,1,0,0
+I feel worried so something bad must be coming,0,0,0,1,0,0
+I feel inadequate so I must not deserve this role,0,0,0,1,0,0
+I feel frustrated so this team must be against me,0,0,0,1,0,0
+I feel uneasy so my plan must be flawed,0,0,0,1,0,0
+I feel ashamed so I must be a bad person,0,0,0,1,0,0
+I feel nervous so I must be unprepared,0,0,0,1,0,0
+I feel drained so I must be doing everything wrong,0,0,0,1,0,0
+I feel lonely so people must not care about me,0,0,0,1,0,0
+I feel confused so I must not be smart enough,0,0,0,1,0,0
+I feel restless so I must be failing at balance,0,0,0,1,0,0
+I feel discouraged so progress must be impossible,0,0,0,1,0,0
+I feel disappointed so this effort must be pointless,0,0,0,1,0,0
+I missed one target so I always fail and this project is doomed,1,1,0,0,0,0
+I got one complaint so I never do well and I will get fired,1,1,0,0,0,0
+I was late once so I am always unreliable and my reputation is ruined,1,1,0,0,0,0
+I made one error so everything I submit will collapse,1,1,0,0,0,0
+I stumbled in one meeting so I always embarrass myself and my career is over,1,1,0,0,0,0
+They were quiet after my comment so they think I am clueless and I feel ashamed so I must be wrong,0,0,1,1,0,0
+My friend replied briefly so she must be upset and I feel guilty so I probably caused it,0,0,1,1,0,0
+My manager looked serious so he must be disappointed and I feel anxious so I must have failed,0,0,1,1,0,0
+They did not respond yet so they must be judging me and I feel uneasy so I must be mistaken,0,0,1,1,0,0
+My teammate asked for edits so he must doubt me and I feel embarrassed so my work must be poor,0,0,1,1,0,0
+I forgot one detail so I always look unprepared and they must think I am careless,1,0,1,0,0,0
+I paused during my answer so I always sound weak and they must see me as incapable,1,0,1,0,0,0
+I needed help once so I never manage alone and my team must think I am dependent,1,0,1,0,0,0
+I got one low score so I am bad at this and my teacher must expect me to fail,1,0,1,0,0,0
+I was quiet today so I am always awkward and everyone must notice it,1,0,1,0,0,0
+If I do not perform perfectly they will reject me and I feel anxious so failure is likely,0,1,0,1,0,0
+If this update is delayed everything will go wrong and I feel tense so it probably will,0,1,0,1,0,0
+If I say one wrong word the talk will be a disaster and I feel nervous so I will mess up,0,1,0,1,0,0
+If I cannot solve this now the outcome will be terrible and I feel overwhelmed so I am not capable,0,1,0,1,0,0
+If my message sounds unclear the relationship will break and I feel scared so that must be true,0,1,0,1,0,0
+This small mistake makes me question everything about myself,1,0,0,0,0,0
+I cannot stop thinking they are disappointed,0,0,1,0,0,0
+One awkward moment defines how I always show up,1,0,0,0,0,0
+I feel uncomfortable so something must be wrong,0,0,0,1,0,0
+If I am not perfect then I am a complete failure,0,0,0,0,1,0
+Either I succeed fully or I am worthless,0,0,0,0,1,0
+This project is either amazing or terrible,0,0,0,0,1,0
+If I cannot do it right the first time I should not try,0,0,0,0,1,0
+People are either good or bad,0,0,0,0,1,0
+If I miss one goal the whole day is ruined,0,0,0,0,1,0
+I am either confident or completely insecure,0,0,0,0,1,0
+If I am not the best I am the worst,0,0,0,0,1,0
+This outcome is either success or disaster,0,0,0,0,1,0
+If I do not win I am nothing,0,0,0,0,1,0
+I must always perform perfectly or I should quit,0,0,0,0,1,0
+Everything is either working or falling apart,0,0,0,0,1,0
+If I am not fully prepared I am completely incompetent,0,0,0,0,1,0
+Either they like me or they hate me,0,0,0,0,1,0
+If I am not calm then I am weak,0,0,0,0,1,0
+My friend looked upset so it must be because of me,0,0,0,0,0,1
+The meeting was tense so I probably caused it,0,0,0,0,0,1
+They did not smile so I must have annoyed them,0,0,0,0,0,1
+My team lost because I was not good enough,0,0,0,0,0,1
+She seemed distracted so I must have bored her,0,0,0,0,0,1
+The project slowed down and it is my fault,0,0,0,0,0,1
+He was quiet so I must have upset him,0,0,0,0,0,1
+They argued so I probably triggered it,0,0,0,0,0,1
+If something goes wrong it is usually because of me,0,0,0,0,0,1
+The atmosphere changed so I must be the reason,0,0,0,0,0,1
+They seemed serious so I must have disappointed them,0,0,0,0,0,1
+The plan failed and it is entirely on me,0,0,0,0,0,1
+My colleague was stressed so I must have added pressure,0,0,0,0,0,1
+If someone is upset I assume it is because of me,0,0,0,0,0,1
+The event was awkward and I am probably the cause,0,0,0,0,0,1
+I completed my assignment on time today,0,0,0,0,0,0
+I will revise the notes tomorrow morning,0,0,0,0,0,0
+I had a balanced discussion with my team,0,0,0,0,0,0
+I can improve gradually with effort,0,0,0,0,0,0
+Today was steady and productive,0,0,0,0,0,0
+I handled the situation calmly,0,0,0,0,0,0
+I learned something useful this week,0,0,0,0,0,0
+I can try again after resting,0,0,0,0,0,0
+The meeting went as expected,0,0,0,0,0,0
+I made a small improvement today,0,0,0,0,0,0
+I am preparing step by step,0,0,0,0,0,0
+I finished reading one chapter,0,0,0,0,0,0
+I spoke briefly but clearly,0,0,0,0,0,0
+I scheduled my tasks for tomorrow,0,0,0,0,0,0
+I feel okay about my progress,0,0,0,0,0,0
+If I make one mistake I always ruin everything and they must think I am useless,1,0,1,0,0,0
+If this presentation fails my career is over and it will be entirely my fault,0,1,0,0,0,1

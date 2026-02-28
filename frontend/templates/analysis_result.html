@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+
+{% block title %}Analysis Result | CognAware AI{% endblock %}
+
+{% block content %}
+<section class="result-page-grid">
+	{% if safety_assessment.requires_alert %}
+	<article class="card safety-alert-card safety-{{ safety_assessment.risk_level }}">
+		<div class="section-head">
+			<h3>Safety Support Alert</h3>
+			<span class="result-meta">Risk: {{ safety_assessment.risk_level|title }}</span>
+		</div>
+		<p>{{ safety_assessment.support_message }}</p>
+		<p><strong>Suggested Helpline (India):</strong> 1800-599-0019</p>
+	</article>
+	{% endif %}
+
+	<article class="card result-thought-card">
+		<span class="eyebrow">Analysis Result</span>
+		<h2>Your Thought Snapshot</h2>
+		<p class="thought-text">{{ thought_text }}</p>
+		<div class="result-page-actions">
+			<a class="btn btn-ghost" href="{{ url_for('analysis.dashboard') }}">Back to Dashboard</a>
+		</div>
+	</article>
+
+	<article class="card result-chart-card">
+		<div class="section-head">
+			<h3>Top Distortion Chart</h3>
+			<span class="result-meta">Model Confidence: {{ prediction.confidence_label }}</span>
+		</div>
+		{% if prediction.top_distortions %}
+			<div class="distortion-list chart-distortion-list">
+				{% for label, value in prediction.top_distortions %}
+					<div class="distortion-row">
+						<div class="distortion-top">
+							<span class="distortion-label">{{ label|replace('_', ' ')|title }}</span>
+							<span class="distortion-tag">{{ (value * 100) | round(1) }}%</span>
+						</div>
+						<div class="progress-track chart-progress-track">
+							<div
+								class="progress-fill tag-{{ label|replace(' ', '_')|lower }}"
+								data-width="{{ ((value * 100) | round(1)) }}"
+							></div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		{% else %}
+			<p>No distortion probabilities available for this thought.</p>
+		{% endif %}
+	</article>
+
+	<article class="card result-chart-card">
+		<div class="section-head">
+			<h3>Cognitive Trend Chart</h3>
+			{% set trend_key = trend|lower|replace(' ', '_') %}
+			<span class="trend-pill trend-{{ trend_key }}">{{ trend }}</span>
+		</div>
+
+		<div class="trend-chart">
+			<div class="trend-row">
+				<div class="trend-label">Current</div>
+				<div class="trend-track">
+					<div class="trend-fill trend-fill-current" data-width="{{ (current_score * 100) | round(2) }}"></div>
+				</div>
+				<div class="trend-value">{{ (current_score * 100) | round(2) }}%</div>
+			</div>
+			<div class="trend-row">
+				<div class="trend-label">Previous Avg</div>
+				<div class="trend-track">
+					<div class="trend-fill trend-fill-previous" data-width="{{ (previous_avg * 100) | round(2) }}"></div>
+				</div>
+				<div class="trend-value">{{ (previous_avg * 100) | round(2) }}%</div>
+			</div>
+			<div class="trend-row">
+				<div class="trend-label">Overall Avg</div>
+				<div class="trend-track">
+					<div class="trend-fill trend-fill-overall" data-width="{{ (overall_avg * 100) | round(2) }}"></div>
+				</div>
+				<div class="trend-value">{{ (overall_avg * 100) | round(2) }}%</div>
+			</div>
+		</div>
+
+		<div class="trend-summary-grid">
+			<div class="trend-summary-item">
+				<span>Most Frequent Pattern</span>
+				<strong>{{ most_frequent_distortion }}</strong>
+			</div>
+			<div class="trend-summary-item">
+				<span>Thoughts Considered</span>
+				<strong>{{ history_length }}</strong>
+			</div>
+		</div>
+	</article>
+
+	<article class="card result-reframe-card">
+		<div class="section-head">
+			<h3>AI Reframe Suggestion</h3>
+			<span class="result-meta">Primary Pattern: {{ reframe_suggestion.primary_distortion|replace('_', ' ')|title }}</span>
+		</div>
+		<div class="reframe-grid">
+			<div class="reframe-item">
+				<span>Challenge Question</span>
+				<p>{{ reframe_suggestion.challenge_question }}</p>
+			</div>
+			<div class="reframe-item">
+				<span>Balanced Reframe</span>
+				<p>{{ reframe_suggestion.balanced_reframe }}</p>
+			</div>
+		</div>
+	</article>
+
+	<article class="card result-pattern-card">
+		<h3>Pattern Insight</h3>
+		{% if pattern_insight.status == "insufficient_data" %}
+			<p>Add more thoughts to unlock deeper pattern insights.</p>
+		{% else %}
+			<p><strong>Most Frequent Distortion:</strong> {{ pattern_insight.most_frequent }}</p>
+			{% if pattern_insight.trend == "decreasing" %}
+				<p>Overall distortion intensity is decreasing by {{ pattern_insight.change_percent | abs }}%.</p>
+			{% elif pattern_insight.trend == "increasing" %}
+				<p>Overall distortion intensity is increasing by {{ pattern_insight.change_percent }}%.</p>
+			{% else %}
+				<p>Overall distortion intensity is stable in recent entries.</p>
+			{% endif %}
+		{% endif %}
+	</article>
+</section>
+
+<script>
+	document.querySelectorAll(".progress-fill[data-width], .trend-fill[data-width]").forEach(function (bar) {
+		var raw = parseFloat(bar.dataset.width || "0");
+		var safe = Math.max(0, Math.min(100, raw));
+		bar.style.width = safe + "%";
+	});
+</script>
+{% endblock %}

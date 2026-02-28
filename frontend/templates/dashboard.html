@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard | CognAware AI{% endblock %}
+
+{% block content %}
+<section class="hero-card">
+	<div>
+		<p class="eyebrow">Warm Mind Dashboard</p>
+		<h1>Welcome back. Share your thought and get gentle clarity.</h1>
+		<p class="hero-subtext">Your reflections stay organized here with simple, visual distortion insights.</p>
+	</div>
+</section>
+
+<section class="card">
+	<form method="POST" action="{{ url_for('analysis.dashboard') }}" class="analysis-form">
+		<label for="thought" class="form-label">What are you thinking right now?</label>
+		<textarea id="thought" name="thought" rows="6" class="form-control" placeholder="Write your thought here..." required></textarea>
+		<button type="submit" class="btn btn-analyze">Analyze</button>
+	</form>
+</section>
+
+<section class="results-section">
+	<div class="section-head">
+		<h2>Your Analysis History</h2>
+		{% if thoughts %}
+			<span class="result-meta">Total Entries: {{ thoughts|length }}</span>
+		{% endif %}
+	</div>
+
+	{% if thoughts %}
+		<div class="results-grid">
+			{% for item in thoughts %}
+				<article class="result-card">
+					<div class="result-card-head">
+						<h3 class="result-title">Thought</h3>
+						<span class="history-meta">{{ item.created_at.strftime('%d %b %Y, %I:%M %p') if item.created_at else 'Recently' }}</span>
+					</div>
+					<p class="thought-text">{{ item.text }}</p>
+					<div class="result-card-actions">
+						{% set confidence_label = item.confidence_label|default('Mild Signal') %}
+						{% set confidence_key = confidence_label|lower|replace(' ', '_') %}
+						<span class="confidence-pill confidence-{{ confidence_key }}">{{ confidence_label }}</span>
+						<a href="{{ url_for('analysis.analysis_result', thought_id=item.id) }}" class="btn btn-ghost btn-sm">View Result</a>
+					</div>
+
+					<div class="distortion-list">
+						{% set default_top_distortions = [('overgeneralization', 0.0), ('catastrophizing', 0.0), ('mind_reading', 0.0)] %}
+						{% set top_distortions = item.top_distortions|default([], true) %}
+						{% if not top_distortions %}
+							{% set top_distortions = default_top_distortions %}
+						{% endif %}
+
+						{% for label, value in top_distortions %}
+							{% set distortion_key = label|lower|replace(' ', '_') %}
+							{% set percent = (value * 100)|round(1) %}
+							<div class="distortion-row{% if value >= 0.5 %} high-confidence{% endif %}">
+								<div class="distortion-top">
+									<span class="distortion-label">{{ label|replace('_', ' ')|title }}</span>
+									<span class="distortion-tag tag-{{ distortion_key }}">{{ percent }}%{% if value >= 0.5 %} • High{% endif %}</span>
+								</div>
+								<div class="progress-track">
+									<div class="progress-fill tag-{{ distortion_key }}" data-width="{{ percent }}"></div>
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+				</article>
+			{% endfor %}
+		</div>
+	{% else %}
+		<div class="card empty-state">
+			<p>No analysis history yet. Submit your first thought above.</p>
+		</div>
+	{% endif %}
+</section>
+
+<script>
+	document.querySelectorAll('.progress-fill[data-width]').forEach((element) => {
+		const value = Number(element.getAttribute('data-width'));
+		const safeValue = Number.isFinite(value) ? Math.max(0, Math.min(100, value)) : 0;
+		element.style.width = `${safeValue}%`;
+	});
+</script>
+{% endblock %}

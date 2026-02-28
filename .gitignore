@@ -1,0 +1,30 @@
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Environment and local secrets
+.env
+*.env
+
+# Database / local runtime files
+*.db
+*.sqlite3
+backend/cognaware.db
+
+# Notebook and temp files
+.ipynb_checkpoints/
+*.tmp
+*.log
+
+# OS/editor artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.vscode/*.code-workspace

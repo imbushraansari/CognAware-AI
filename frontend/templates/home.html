@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block title %}CognAware AI | Home{% endblock %}
+
+{% block content %}
+<section class="hero-card home-hero">
+	<div class="home-hero-content">
+		<p class="eyebrow">CognAware AI</p>
+		<h1>Understand thought patterns with clarity, confidence, and actionable guidance.</h1>
+		<p class="hero-subtext">A reflection-focused AI workspace that identifies distortions, explains intensity, and supports better reframing over time.</p>
+		<ul class="home-value-list">
+			<li>Top-3 distortion chart for each thought</li>
+			<li>Historical trend tracking for personal progress</li>
+			<li>Safety-aware prompts and balanced reframing support</li>
+		</ul>
+		<div class="home-actions">
+			<a href="{{ url_for('analysis.dashboard') }}" class="btn btn-primary">Start Analyzing</a>
+			<a href="{{ url_for('auth.register') }}" class="btn btn-ghost">Create Account</a>
+		</div>
+		<p class="home-trust-note">Built as an explainable wellness-support tool for reflection, not diagnosis.</p>
+	</div>
+	<div class="home-hero-panel">
+		<h3>Live Analysis Snapshot</h3>
+		<p class="home-signal-note">Example model output for one thought</p>
+		<div class="home-signal-row">
+			<span>Overgeneralization</span>
+			<strong>38.0%</strong>
+		</div>
+		<div class="progress-track">
+			<div class="progress-fill tag-overgeneralization" data-width="38"></div>
+		</div>
+		<div class="home-signal-row">
+			<span>Black White Thinking</span>
+			<strong>36.2%</strong>
+		</div>
+		<div class="progress-track">
+			<div class="progress-fill tag-black_white_thinking" data-width="36.2"></div>
+		</div>
+		<div class="home-signal-row">
+			<span>Mind Reading</span>
+			<strong>24.1%</strong>
+		</div>
+		<div class="progress-track">
+			<div class="progress-fill tag-mind_reading" data-width="24.1"></div>
+		</div>
+		<div class="home-stat-grid">
+			<div class="home-stat-item"><span>Confidence</span><strong>Moderate Signal</strong></div>
+			<div class="home-stat-item"><span>Result Mode</span><strong>Top-3 Explainable</strong></div>
+		</div>
+	</div>
+</section>
+
+<section class="card home-section">
+	<div class="home-section-head">
+		<h2>Distortion Intelligence Coverage</h2>
+		<p>Six cognitive distortion classes are consistently mapped from model output to dashboard and result views.</p>
+	</div>
+	<div class="home-grid-3">
+		<article class="home-feature-card"><h3>Overgeneralization</h3><p>Interpreting one difficult event as a permanent pattern.</p></article>
+		<article class="home-feature-card"><h3>Catastrophizing</h3><p>Jumping quickly to the worst possible outcome.</p></article>
+		<article class="home-feature-card"><h3>Mind Reading</h3><p>Assuming others think negatively without direct evidence.</p></article>
+		<article class="home-feature-card"><h3>Emotional Reasoning</h3><p>Treating strong feelings as unquestionable facts.</p></article>
+		<article class="home-feature-card"><h3>Black &amp; White Thinking</h3><p>Viewing situations only in extremes, without middle ground.</p></article>
+		<article class="home-feature-card"><h3>Personalization</h3><p>Taking excessive blame for events outside your control.</p></article>
+	</div>
+</section>
+
+<section class="card home-section">
+	<div class="home-section-head">
+		<h2>How the Workflow Operates</h2>
+	</div>
+	<div class="home-steps">
+		<div><span class="home-step-no">1</span><h3>Capture Thought</h3><p>Write your current thought in one sentence or paragraph.</p></div>
+		<div><span class="home-step-no">2</span><h3>Analyze Pattern</h3><p>The model scores all six distortions and highlights top three.</p></div>
+		<div><span class="home-step-no">3</span><h3>Take Action</h3><p>Review trend, confidence, and AI reframe guidance for next step.</p></div>
+	</div>
+</section>
+
+<section class="card home-cta">
+	<h2>Ready to start your reflection journey?</h2>
+	<p>Sign in and run your first thought analysis in under one minute.</p>
+	<div class="home-actions">
+		<a href="{{ url_for('auth.login') }}" class="btn btn-ghost">Login</a>
+		<a href="{{ url_for('analysis.dashboard') }}" class="btn btn-primary">Go to Dashboard</a>
+	</div>
+	<p class="home-help">Need support? India Mental Health Helpline: <strong>1800-599-0019</strong></p>
+</section>
+
+<script>
+	document.querySelectorAll('.home-hero-panel .progress-fill[data-width]').forEach((element) => {
+		const value = Number(element.getAttribute('data-width'));
+		const safeValue = Number.isFinite(value) ? Math.max(0, Math.min(100, value)) : 0;
+		element.style.width = `${safeValue}%`;
+	});
+</script>
+{% endblock %}

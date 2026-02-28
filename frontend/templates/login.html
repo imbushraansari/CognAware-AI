@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Login | CognAware AI{% endblock %}
+
+{% block content %}
+<section class="auth-layout">
+	<article class="auth-card">
+		<p class="eyebrow">Warm Mind</p>
+		<h1>Welcome back</h1>
+		<p class="auth-subtext">Sign in to continue your reflection journey.</p>
+
+		<form method="POST" action="{{ url_for('auth.login') }}" class="auth-form">
+			<div class="form-group">
+				<label for="email" class="form-label">Email</label>
+				<input type="email" id="email" name="email" class="form-control" required autocomplete="email">
+			</div>
+			<div class="form-group">
+				<label for="password" class="form-label">Password</label>
+				<input type="password" id="password" name="password" class="form-control" required autocomplete="current-password">
+			</div>
+			<button type="submit" class="btn btn-primary btn-full">Sign In</button>
+		</form>
+
+		<p class="auth-footer">
+			Don’t have an account?
+			<a href="{{ url_for('auth.register') }}">Register here</a>
+		</p>
+	</article>
+</section>
+{% endblock %}

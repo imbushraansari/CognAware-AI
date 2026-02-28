@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% block title %}CognAware AI{% endblock %}</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	<div class="app-shell">
+		<header class="site-header">
+			<nav class="navbar container">
+				<a class="brand" href="{{ url_for('auth.home_redirect') }}">
+					<span class="brand-dot"></span>
+					<span>CognAware AI</span>
+				</a>
+				<div class="nav-actions">
+				{% if current_user.is_authenticated %}
+					<span class="welcome-text">Welcome, {{ current_user.name }}</span>
+					<a class="btn btn-ghost" href="{{ url_for('analysis.dashboard') }}">Dashboard</a>
+					<a class="btn btn-ghost" href="{{ url_for('auth.logout') }}">Logout</a>
+				{% else %}
+					<a class="btn btn-ghost" href="{{ url_for('auth.login') }}">Login</a>
+					<a class="btn btn-primary" href="{{ url_for('auth.register') }}">Register</a>
+				{% endif %}
+				</div>
+			</nav>
+		</header>
+
+		<main class="container page-content">
+		{% with messages = get_flashed_messages(with_categories=true) %}
+			{% if messages %}
+				<section class="flash-stack">
+					{% for category, message in messages %}
+						<div class="flash-message flash-{{ category }}">{{ message }}</div>
+					{% endfor %}
+				</section>
+			{% endif %}
+		{% endwith %}
+
+		{% block content %}{% endblock %}
+		</main>
+	</div>
+</body>
+</html>
