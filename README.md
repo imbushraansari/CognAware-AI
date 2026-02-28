@@ -142,9 +142,9 @@ Database:
 - 🧠 Transformer-based contextual model upgrade
 - 🐳 Dockerized production deployment
 - 🛡️ CSRF & advanced production security hardening
+- 📱 Mobile journaling app extension
 
 git clone https://github.com/imbushraansari/CognAware-AI.git
 cd CognAware-AI
 
-- 📱 Mobile journaling app extension
 
