@@ -1,3 +1,12 @@
+👩‍💻 Team
+
+Developed under AI for Social Good Hackathon  
+Team CognAware AI  
+- Bushra Ansari  
+- Shafia Shaikh
+- Saima Ansari
+- Laiba Ansari
+
 🧠 CognAware AI  
 Intelligent Cognitive Distortion Detection & Reflective Analytics Platform  
 
@@ -133,17 +142,9 @@ Database:
 - 🧠 Transformer-based contextual model upgrade
 - 🐳 Dockerized production deployment
 - 🛡️ CSRF & advanced production security hardening
-- 📱 Mobile journaling app extension
 
-👩‍💻 Team
-
-Developed under AI for Social Good Hackathon  
-Team CognAware AI  
-- Bushra Ansari  
-- Shafia Shaikh
-- Saima Ansari
-- Laiba Ansari
-
-```bash
 git clone https://github.com/imbushraansari/CognAware-AI.git
 cd CognAware-AI
+
+- 📱 Mobile journaling app extension
+
